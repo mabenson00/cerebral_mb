@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: insurances
+#
+#  id           :bigint           not null, primary key
+#  group_name   :string           not null
+#  name         :string           not null
+#  relationship :integer          not null
+#  state        :string           not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  group_id     :integer          not null
+#  policy_id    :string           not null
+#  user_id      :bigint           not null
+#
+# Indexes
+#
+#  index_insurances_on_user_id  (user_id)
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
