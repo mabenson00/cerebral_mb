@@ -42,6 +42,7 @@ export default class InsuranceForm extends React.Component {
     }
     })
       .then(response => {
+        console.log(this)
         console.log(response);
       })
       .catch(error => {

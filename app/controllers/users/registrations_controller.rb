@@ -6,8 +6,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /users
   def create
     @user = User.create!(user_params)
-    json_response(@user, :created)
+    sign_in(@user)
+
   end
+
+  # #  GET /resource/edit
+  # def edit
+  #   super
+  # end
+
+  # # PUT /resource
+  # def update
+  #   super
+  # end
+
+  # # DELETE /resource
+  # def destroy
+  #   super
+  # end
+
 
   private
 
