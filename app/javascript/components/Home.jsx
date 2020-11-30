@@ -9,9 +9,7 @@ function Home() {
       <div className="hero-container">
         <div className="hero-content">
           <h2> Expert Help For Your Emotional Health </h2>
-            <InsuranceForm
-              girl =  {girl}
-            />
+            <InsuranceForm/>
         </div>
 
         <div className="girl-wrap">

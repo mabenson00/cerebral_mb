@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios"
 
 export default class InsuranceForm extends React.Component {
   constructor(props) {
@@ -12,13 +13,14 @@ export default class InsuranceForm extends React.Component {
       state: "",
       group_id: "",
       policy_id: "",
+      error_message: ""
     };
 
   }
 
   handleInputChange = (event) => {
     const target = event.target;
-    // const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
@@ -28,7 +30,31 @@ export default class InsuranceForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const token = document.querySelector('[name=csrf-token]').content
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = token
+
+    axios.post('/users',
+      {
+      authenticity_token: token,
+      user: {
+      email: this.state.email,
+      password: this.state.password,
+    }
+    })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error.response)
+        console.log(error.response.data.message)
+
+        this.setState({
+          error_message: error.response.data.message
+        })
+      });
+
   }
+
 
   render() {
     return (
@@ -50,9 +76,10 @@ export default class InsuranceForm extends React.Component {
             <input
               name="password"
               type="password"
-              value={this.state.email}
+              value={this.state.password}
               onChange={this.handleInputChange} />
         </section>
+        <p className="error">{this.state.error_message}</p>
         <input type="submit" value="Submit" />
       </form>
     );
