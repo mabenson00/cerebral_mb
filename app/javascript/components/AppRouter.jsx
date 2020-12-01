@@ -11,7 +11,7 @@ export default function AppRouter(props)  {
     <Router>
       <Switch>
         <Route
-          path='/'
+          exact path='/'
           render={(props) => (
             <Home {...props}
               setUserId = {setUserId}
