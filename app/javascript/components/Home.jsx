@@ -2,7 +2,7 @@ import React from "react";
 import {
   BrowserRouter as Router, Route, Switch, Redirect, useHistory, useLocation
 } from "react-router-dom";
-import InsuranceForm from "../components/InsuranceForm.jsx"
+import SignUpForm from "../components/SignUpForm.jsx"
 import girl from "images/girl-pillow-wide.png";
 function Home(props) {
     return (
@@ -11,7 +11,7 @@ function Home(props) {
           <h4> {props.userEmail} </h4>
         <div className="hero-content">
             <h2> {props.userId} Expert Help For Your Emotional Health</h2>
-            <InsuranceForm
+            <SignUpForm
             setUserId ={props.setUserId}
             setUserEmail ={props.setUserEmail}/>
         </div>

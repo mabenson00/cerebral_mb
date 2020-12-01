@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_11_29_145917) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "status", default: 1, null: false
     t.bigint "insurance_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

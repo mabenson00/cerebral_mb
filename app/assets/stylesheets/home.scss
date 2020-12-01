@@ -10,16 +10,6 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-
-      form {
-        display: flex;
-        flex-direction: column;
-        section{
-          display: flex;
-          flex-direction: column;
-        }
-
-      }
     }
     .girl-wrap{
       clip-path: ellipse(59% 65% at 65% 50%);

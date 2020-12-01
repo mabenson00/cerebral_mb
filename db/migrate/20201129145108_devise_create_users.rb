@@ -14,6 +14,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       ## Rememberable
       t.datetime :remember_created_at
 
+      # check if this is "incomplete"
+      t.integer :status, default: 1, null: false
+
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
       # t.datetime :current_sign_in_at
