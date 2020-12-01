@@ -42,8 +42,8 @@ export default class InsuranceForm extends React.Component {
     }
     })
       .then(response => {
-        console.log(this)
-        console.log(response);
+        this.props.setUserEmail(response.data.email)
+        this.props.setUserId(response.data.id);
       })
       .catch(error => {
         console.log(error.response)

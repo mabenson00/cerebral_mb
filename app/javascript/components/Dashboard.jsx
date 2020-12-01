@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+  BrowserRouter as Router, Route, Switch, Redirect, useHistory, useLocation
+} from "react-router-dom";
 
-class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      recipes: []
-    };
-  }
-
+function Dashboard(props) {
+  // let history = useHistory();
+  // let location = useLocation();
+  // history.push(location);
+  console.log("this runs")
+  return (
+    <div className="dashboard-container">
+      fuck
+    </div>
+  )
 }
-export default Dashboard;
+
+export default Dashboard

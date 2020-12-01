@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router, Route, Switch, Redirect, useHistory, useLocation
+} from "react-router-dom";
 import InsuranceForm from "../components/InsuranceForm.jsx"
 import girl from "images/girl-pillow-wide.png";
-function Home() {
-  const [count, setFormVersion] = useState("short");
+function Home(props) {
     return (
     <div className="home-container">
       <div className="hero-container">
+          <h4> {props.userEmail} </h4>
         <div className="hero-content">
-          <h2> Expert Help For Your Emotional Health </h2>
-            <InsuranceForm/>
+            <h2> {props.userId} Expert Help For Your Emotional Health</h2>
+            <InsuranceForm
+            setUserId ={props.setUserId}
+            setUserEmail ={props.setUserEmail}/>
         </div>
 
         <div className="girl-wrap">
-          <img src={girl}></img>
+            <img src={girl}></img>
         </div>
       </div>
     </div>
