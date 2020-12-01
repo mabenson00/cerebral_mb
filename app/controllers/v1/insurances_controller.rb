@@ -11,7 +11,7 @@ class V1::InsurancesController < ApplicationController
   end
 
   def create
-    @insurance = Insurance.create(insurance_params)
+    @insurance = Insurance.create!(insurance_params)
     current_user.insurance_id = @insurance.id
     current_user.save
     json_response(@insurance, status = :created)

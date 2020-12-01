@@ -9,6 +9,7 @@ export default function AppRouter(props)  {
   const [userEmail, setUserEmail] = useState(props.user_id)
   const isLoggedIn = !!userId
 
+  // TODO: Redo the logic so it redirects "home" if you aren't logged in, instead of the other way around.
   const homeRoute = () => {
     if (!isLoggedIn) {
       return (

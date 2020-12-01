@@ -20,8 +20,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # add web tokens to get devise to work with react front end
-gem 'devise-jwt'
-
+gem 'factory_bot'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -35,6 +34,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails', '~> 4.0.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
