@@ -4,7 +4,6 @@ class V1::InsurancesController < ApplicationController
 
   before_action :authenticate_user!
 
-
   def create
     @insurance = Insurance.create!(insurance_params)
     current_user.insurance_id = @insurance.id
