@@ -12,6 +12,31 @@ body {
     background: linear-gradient(165.96deg, rgb(210, 239, 246) 3.32%, rgb(212, 219, 245) 97.9%);
   }
 
+  .btn{
+    border: none;
+    background: rgb(89, 227, 179);
+    box-shadow: rgba(34, 34, 52, 0.13) 0px 7px 14px;
+    border-radius: 30px;
+    color: rgb(44, 44, 44);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 22px 0px;
+    min-width: 240px;
+    max-width: 480px;
+    text-align: center;
+    margin: 40px;
+
+    &.btn-small{
+      font-size: 18px;
+      padding: 8px 0px;
+      margin: 20px;
+    }
+  }
+
   h1 {
     text-align: center;
   }

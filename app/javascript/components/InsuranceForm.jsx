@@ -48,7 +48,7 @@ export default class InsuranceForm extends React.Component {
     }
     })
     .then(response => {
-      console.log(response)
+      console.log(response.data)
       this.props.setIsInsuranceComplete(true)
     })
     .catch(error => {
@@ -125,7 +125,7 @@ export default class InsuranceForm extends React.Component {
         </section>
         <p className="error">{this.state.error_message}</p>
 
-        <input type="submit" value="Add Insurance" />
+        <input type="submit" className="btn" value="Add Insurance" />
       </form>
     );
   }

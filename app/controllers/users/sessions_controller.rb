@@ -8,18 +8,10 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def create
-    # passes block into devise create method
-    # sets up a cookie so react can read frontend
-    super do
-      cookies[:current_user] = { user_id: current_user.id, email: current_user.email, expires: 24.hours.from_now }
-    end
+    super
   end
 
   def destroy
-    super do
-      cookies.delete :current_user
-    end
-
-    # destroy user info when logged out
+    super
   end
 end

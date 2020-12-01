@@ -2,13 +2,8 @@ class V1::InsurancesController < ApplicationController
   include Response
   include ExceptionHandler
 
-  def index
-    @insurances = Insurance.all
-  end
+  before_action :authenticate_user!
 
-  def show
-
-  end
 
   def create
     @insurance = Insurance.create!(insurance_params)

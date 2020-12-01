@@ -81,7 +81,7 @@ export default class SignUpForm extends React.Component {
             onChange={this.handleInputChange} />
         </section>
         <p className="error">{this.state.error_message}</p>
-        <input type="submit" value="Submit" />
+        <input type="submit" className="btn" value="Sign Up!" />
       </form>
     );
   }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CerebralMb</title>
+    <title>Cerebral</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,23 +12,6 @@
     <%= javascript_pack_tag 'Index' %>
   </head>
   <body>
-  <% if flash.alert %>
- <div id=”error_explanation”>
-  <ul>
-   <li><%= flash.alert %></li>
-  </ul>
- </div>
-<% end %>
-
-  <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path) %>
-  </li>
-<% end %>
     <%= yield %>
   </body>
 </html>
