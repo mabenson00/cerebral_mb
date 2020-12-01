@@ -30,7 +30,7 @@ export default class InsuranceForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const token = document.querySelector("[name=csrf-token]").content;
+    let token = document.querySelector("[name=csrf-token]").content;
     axios.defaults.headers.common["X-CSRF-TOKEN"] = token;
 
     axios

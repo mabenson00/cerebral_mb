@@ -20,10 +20,12 @@ export default function Header(props) {
   }
   return (
     <nav>
-      <img src={logo}></img>
+      <a href="/">
+        <img src={logo}></img>
+      </a>
       <div className="log">
         {props.userId && (
-          <button onClick={logOut()} className="btn btn-small">
+          <button onClick={logOut} className="btn btn-small">
             Log Out
           </button>
         )}
